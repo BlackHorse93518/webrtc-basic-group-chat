@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!-- This adapter.js file de-prefixes the webkit* and moz* prefixed RTC
+             methods. When RTC becomes a more solid standard, this adapter should no
+             longer be necessary. -->
+        <!-- <script src="https://webrtc.googlecode.com/svn/trunk/samples/js/base/adapter.js"></script> -->
+        <style>
+            html, body { 
+                background-color: #333; 
+            }
+            video {
+                width:  320px;
+                height:  240px;
+                border:  1px solid black;
+            }
+            .main-dlg{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .label-name{
+                font-size: 28px;
+                color: aliceblue;
+            }
+        </style>
+        <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+        <script src="js/websocket.js"></script>
+        </head>
+        <body >
+           <div class="main-dlg">
+               <p class="label-name">Please insert your Nick Name:</p>
+               <input class="input-name" type="text">
+               <p class="status"></p>
+               <button class="start-voice" onclick='joinCall()'>Join Now</button>
+           </div>
+        </body>
+    </html>
